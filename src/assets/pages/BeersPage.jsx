@@ -1,18 +1,19 @@
+import BeersList from "../components/BeersList";
+
 export default function BeersPage() {
   return (
     <>
       <div className="jumbo">
         <div className="container">
-          <div className="row jumbo-title">
-            <div className="col-2">a</div>
-            <div className="col-8">
-              <h1>Beers List</h1>
-            </div>
-            <div className="col-2">a</div>
-          </div>
+          <h1 className="jumbo-title">Beers List</h1>
         </div>
       </div>
-      <div className="container"></div>;
+
+      <section>
+        <div className="container">
+          <BeersList />
+        </div>
+      </section>
     </>
   );
 }
