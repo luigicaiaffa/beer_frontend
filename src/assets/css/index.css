@@ -1,0 +1,53 @@
+:root {
+  --primary-color: #ffbd4a;
+  --secondary-color: #212529;
+  --title-font: "Rubik Mono One", serif;
+  --text-font: "Be Vietnam Pro", serif;
+  --navbar-height: 3.2rem;
+  --jumbo-height: 28rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  max-width: 100%;
+  max-height: var(--navbar-height);
+}
+
+.jumbo {
+  background-image: linear-gradient(360deg, #ffbd4a, #140f06);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: var(--jumbo-height);
+  padding: 2rem 0;
+}
+
+.jumbo-title {
+  padding-top: 7rem;
+  text-align: center;
+  font-weight: 900;
+  font-family: var(--title-font);
+  font-size: 6rem;
+  color: var(--secondary-color);
+}
+
+.jumbo-btn {
+  background-color: #ffe8c8;
+  border-radius: 1rem;
+  font-size: 2rem;
+  border: 1px solid var(--secondary-color);
+  font-family: var(--text-font);
+  font-weight: 900;
+  text-decoration: none;
+  padding: 0.3rem;
+}
+
+.jumbo-btn  img {
+  max-height: 3rem;
+}
+
+
+

@@ -3,6 +3,7 @@ import { GlobalContextProvider } from "./assets/contexts/GlobalContext";
 
 import DefaultLayout from "./assets/layouts/DefaultLayout";
 import HomePage from "./assets/pages/HomePage";
+import BeersPage from "./assets/pages/BeersPage";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <Route element={<DefaultLayout />}>
             <Route path="/">
               <Route index element={<HomePage />} />
-              {/* <Route path="beers" element={<BeersPage />} /> */}
+              <Route path="beers" element={<BeersPage />} />
               {/* <Route path="beers/:id" element={<BeerShowPage />} /> */}
               {/* <Route path="beers/add" element={<NewBeerPage />} /> */}
               {/* <Route path="breweries/add" element={<NewBreweryPage />} /> */}
