@@ -9,6 +9,8 @@ export default function BeersPage() {
       <div className="jumbo">
         <div className="container">
           <h1 className="jumbo-title">Beers List</h1>
+
+          {/* filtri */}
         </div>
       </div>
 

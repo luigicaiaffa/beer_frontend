@@ -51,14 +51,19 @@ a {
 .jumbo-btn {
   background-color: var(--bg-color);
   border-radius: 1rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   border: 1px solid var(--secondary-color);
-  font-family: var(--text-font);
-  font-weight: 900;
+  font-family: var(--title-font);
   text-decoration: none;
+  align-items: center;
   padding: 0.3rem;
 }
 
+.jumbo-btn:hover {
+  scale: 1.05;
+  color: var(--bg-color);
+  background-color: var(--secondary-color);
+} 
 .jumbo-btn img {
   max-height: 3rem;
 }
@@ -83,6 +88,13 @@ a {
 .carousel-item .row:hover {
   cursor: pointer;
   scale: 1.05;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-item .col-md-2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
 
 /* # BeersList Page */

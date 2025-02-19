@@ -11,7 +11,7 @@ export default function HomePage() {
         <div className="container">
           <h1 className="jumbo-title">Beer Hall</h1>
 
-          <div className="d-flex justify-content-center pt-4">
+          <div className="d-flex justify-content-center pt-5">
             <Link className="jumbo-btn d-flex" to={"/beers"}>
               <img src="./svg/can.svg" alt="can" />
               <span className="px-5">Beers</span>
