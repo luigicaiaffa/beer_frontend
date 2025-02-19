@@ -1,6 +1,9 @@
 import BeersList from "../components/BeersList";
+import { useGlobalContext } from "../contexts/GlobalContext";
 
 export default function BeersPage() {
+  const beersData = useGlobalContext();
+
   return (
     <>
       <div className="jumbo">
@@ -11,7 +14,7 @@ export default function BeersPage() {
 
       <section>
         <div className="container">
-          <BeersList />
+          <BeersList data={beersData} />
         </div>
       </section>
     </>

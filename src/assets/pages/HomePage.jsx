@@ -22,10 +22,9 @@ export default function HomePage() {
       </section>
       <section className="carousel-section">
         <div className="container">
-          <Carousel />
+          <Carousel data={beersData} />
         </div>
       </section>
-      ;
     </>
   );
 }

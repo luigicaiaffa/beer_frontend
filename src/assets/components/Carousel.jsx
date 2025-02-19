@@ -1,55 +1,35 @@
-export default function Carousel() {
+export default function Carousel({ data }) {
   return (
     <div id="carouselExample" className="carousel slide carousel-dark ">
       <div className="carousel-inner">
-        <div className="carousel-item active">
-          <div className="d-flex">
-            <img
-              src={import.meta.env.VITE_API_IMG + "peroni_33.png"}
-              className="d-block"
-            />
-            <img
-              src={import.meta.env.VITE_API_IMG + "peroni_33.png"}
-              className="d-block"
-            />
-            <img
-              src={import.meta.env.VITE_API_IMG + "peroni_33.png"}
-              className="d-block"
-            />
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="d-flex">
-            <img
-              src={import.meta.env.VITE_API_IMG + "peroni_33.png"}
-              className="d-block"
-            />
-            <img
-              src={import.meta.env.VITE_API_IMG + "peroni_33.png"}
-              className="d-block"
-            />
-            <img
-              src={import.meta.env.VITE_API_IMG + "peroni_33.png"}
-              className="d-block"
-            />
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="d-flex">
-            <img
-              src={import.meta.env.VITE_API_IMG + "peroni_33.png"}
-              className="d-block"
-            />
-            <img
-              src={import.meta.env.VITE_API_IMG + "peroni_33.png"}
-              className="d-block"
-            />
-            <img
-              src={import.meta.env.VITE_API_IMG + "peroni_33.png"}
-              className="d-block"
-            />
-          </div>
-        </div>
+        {data.map((beer, i) => {
+          return (
+            <div className={"carousel-item " + (i === 0 ? "active" : "")}>
+              <div className="row justify-content-center align-items-center g-0">
+                {/* <div className="col-md-4"></div> */}
+                <div className="col-md-4">
+                  <img
+                    src={import.meta.env.VITE_API_IMG + beer.image}
+                    className="img-fluid beer-img"
+                    alt="beer"
+                  />
+                </div>
+                <div className="col-md-2">
+                  <div>
+                    <h1>{beer.name}</h1>
+                    <div className="">
+                      <img
+                        src={`https://flagsapi.com/${beer.nation}/flat/64.png`}
+                        className="flags"
+                        alt={beer.nation}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
       <button
         className="carousel-control-prev"
